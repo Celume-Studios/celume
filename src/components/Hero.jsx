@@ -8,9 +8,9 @@ const Hero = () => {
   useEffect(() => {
     const calculateColumns = () => {
       const screenWidth = window.innerWidth;
-      const columnWidth = 64; // width of each column in pixels
-      const numberOfColumns = Math.ceil(screenWidth / columnWidth);
-      setColumnCount(numberOfColumns);
+      const columnWidth = 75; // Match the width in CSS
+      const columnsNeeded = Math.ceil((screenWidth * 1.5) / columnWidth); // Ensure full coverage with some overlap
+      setColumnCount(columnsNeeded);
     };
 
     calculateColumns();
@@ -22,9 +22,16 @@ const Hero = () => {
     <div className="hero-wrapper">
       {/* Background columns */}
       <div className="hero-container">
-        {Array(columnCount).fill(null).map((_, index) => (
-          <div key={index} className="hero-column"></div>
-        ))}
+        <div className="columns-wrapper">
+          {/* First set of columns */}
+          {Array(columnCount).fill(null).map((_, index) => (
+            <div key={`first-${index}`} className="hero-column"></div>
+          ))}
+          {/* Duplicate set of columns for seamless loop */}
+          {Array(columnCount).fill(null).map((_, index) => (
+            <div key={`second-${index}`} className="hero-column"></div>
+          ))}
+        </div>
       </div>
 
       {/* Content overlay */}
@@ -47,9 +54,7 @@ const Hero = () => {
         <div className="hero-content">
           <h1>
             <span className="highlight">Craft Amazing Visual</span>
-            <br />
             Design For Your Customers
-            <br />
             <span className="highlight">With Celume Studios</span>
           </h1>
           <p>we help you build a new visual appeal for your products , your brand , your platform</p>
