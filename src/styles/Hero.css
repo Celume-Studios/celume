@@ -30,7 +30,7 @@
     left: 0;
     top: 0;
     height: 100%;
-    animation: slideColumns 120s linear infinite;
+    animation: slideColumns 160s linear infinite;
     will-change: transform;
 }
 
