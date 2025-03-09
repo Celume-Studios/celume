@@ -1,4 +1,12 @@
 import React from 'react';
+import threeDImage from '../assets/3d modeling-amico 1.png';
+import developmentImage from '../assets/Application programming interface-rafiki 1.png';
+import marketingImage from '../assets/Mobile Marketing-amico (1) 1.png';
+import uiDesignImage from '../assets/Mobile UI-UX-cuate 1.png';
+import experiencesIcon from '../assets/experiences.png';
+import marketingIcon from '../assets/marketing.png';
+import uiIcon from '../assets/ui.png';
+import webIcon from '../assets/web.png';
 import '../styles/Features.css';
 
 const Features = () => {
@@ -31,61 +39,61 @@ const Features = () => {
         <div className="features-grid">
           {/* 3D Experiences Card */}
           <div className="feature-card orange">
-            <div className="card-icon">
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z" stroke="currentColor" strokeWidth="2"/>
-              </svg>
+            <div className="card-content">
+              <div className="card-icon">
+                <img src={experiencesIcon} alt="3D Experiences Icon" />
+              </div>
+              <h4>3D Experiences</h4>
+              <p>We craft custom 3D VR experiences, Realistic animated videos and anamorphic animations for screens</p>
+              <a href="#start" className="card-link">Start with us →</a>
             </div>
-            <h4>3D Experiences</h4>
-            <p>We craft custom 3D VR experiences, Realistic animated videos and anamorphic animations for screens</p>
-            <a href="#start" className="card-link">Start with us →</a>
             <div className="card-illustration">
-              {/* Add your 3D illustration here */}
+              <img src={threeDImage} alt="3D Experience" />
             </div>
           </div>
 
           {/* UI/UX Design Card */}
           <div className="feature-card dark">
-            <div className="card-icon">
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M17 8C17 10.7614 14.7614 13 12 13C9.23858 13 7 10.7614 7 8C7 5.23858 9.23858 3 12 3C14.7614 3 17 5.23858 17 8Z" stroke="currentColor" strokeWidth="2"/>
-              </svg>
+            <div className="card-content">
+              <div className="card-icon">
+                <img src={uiIcon} alt="UI/UX Design Icon" />
+              </div>
+              <h4>UI/UX Design</h4>
+              <p>We analyze everything about your business and your customers to provide the most suiting interfaces</p>
+              <a href="#start" className="card-link">Start with us →</a>
             </div>
-            <h4>UI/UX Design</h4>
-            <p>We analyze everything about your business and your customers to provide the most suiting interfaces</p>
-            <a href="#start" className="card-link">Start with us →</a>
             <div className="card-illustration">
-              {/* Add your UI/UX illustration here */}
+              <img src={uiDesignImage} alt="UI/UX Design" />
             </div>
           </div>
 
           {/* Marketing Card */}
           <div className="feature-card dark">
-            <div className="card-icon">
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 8L12 16M12 16L15 13M12 16L9 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
+            <div className="card-content">
+              <div className="card-icon">
+                <img src={marketingIcon} alt="Marketing Icon" />
+              </div>
+              <h4>Marketing</h4>
+              <p>We help with marketing and advertising your brand through creative 3D visuals or tailormade branded content</p>
+              <a href="#start" className="card-link">Start with us →</a>
             </div>
-            <h4>Marketing</h4>
-            <p>We help with marketing and advertising your brand through creative 3D visuals or tailormade branded content</p>
-            <a href="#start" className="card-link">Start with us →</a>
             <div className="card-illustration">
-              {/* Add your Marketing illustration here */}
+              <img src={marketingImage} alt="Marketing" />
             </div>
           </div>
 
           {/* Building websites Card */}
           <div className="feature-card orange">
-            <div className="card-icon">
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-              </svg>
+            <div className="card-content">
+              <div className="card-icon">
+                <img src={webIcon} alt="Web Development Icon" />
+              </div>
+              <h4>Building websites & applications</h4>
+              <p>Bring your business ideas to life the way you envision it with our studio</p>
+              <a href="#start" className="card-link">Start with us →</a>
             </div>
-            <h4>Building websites & applications</h4>
-            <p>Bring your business ideas to life the way you envision it with our studio</p>
-            <a href="#start" className="card-link">Start with us →</a>
             <div className="card-illustration">
-              {/* Add your Development illustration here */}
+              <img src={developmentImage} alt="Development" />
             </div>
           </div>
         </div>

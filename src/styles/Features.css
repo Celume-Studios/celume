@@ -58,21 +58,45 @@
 /* Grid Layout */
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(12, 1fr);
     gap: 2rem;
     position: relative;
 }
 
 /* Card Styles */
 .feature-card {
-    padding: 2rem;
+    padding: 2.5rem;
     border-radius: 24px;
     position: relative;
     overflow: hidden;
-    min-height: 300px;
+    min-height: 320px;
     display: flex;
     flex-direction: column;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+/* First card (3D Experiences) - Large */
+.feature-card:nth-child(1) {
+    grid-column: span 7;
+    min-height: 380px;
+}
+
+/* Second card (UI/UX Design) - Small */
+.feature-card:nth-child(2) {
+    grid-column: span 5;
+    min-height: 380px;
+}
+
+/* Third card (Marketing) - Small */
+.feature-card:nth-child(3) {
+    grid-column: span 5;
+    min-height: 380px;
+}
+
+/* Fourth card (Building websites) - Large */
+.feature-card:nth-child(4) {
+    grid-column: span 7;
+    min-height: 380px;
 }
 
 .feature-card.orange {
@@ -86,6 +110,26 @@
 
 .feature-card:hover {
     transform: translateY(-5px);
+}
+
+.card-content {
+    position: relative;
+    z-index: 2;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    max-width: 55%;
+}
+
+/* Adjust content width based on card size */
+.feature-card:nth-child(1) .card-content,
+.feature-card:nth-child(4) .card-content {
+    max-width: 50%;
+}
+
+.feature-card:nth-child(2) .card-content,
+.feature-card:nth-child(3) .card-content {
+    max-width: 65%;
 }
 
 .card-icon {
@@ -129,11 +173,66 @@
 
 .card-illustration {
     position: absolute;
-    bottom: 1rem;
-    right: 1rem;
-    width: 150px;
-    height: 150px;
-    opacity: 0.8;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    pointer-events: none;
+    overflow: hidden;
+    /* padding: 1rem; */
+}
+
+/* Adjust illustration size based on card size */
+.feature-card:nth-child(1) .card-illustration,
+.feature-card:nth-child(4) .card-illustration {
+    width: 55%;
+    right: -8%;
+}
+
+.feature-card:nth-child(2) .card-illustration,
+.feature-card:nth-child(3) .card-illustration {
+    width: 50%;
+    right: -8%;
+}
+
+.card-illustration img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover .card-illustration img {
+    transform: scale(1.05);
+}
+
+/* Specific positioning adjustments */
+.feature-card:nth-child(1) .card-illustration img {
+    transform: scale(0.95) translateX(-5%);
+}
+
+.feature-card:nth-child(2) .card-illustration img {
+    transform: scale(0.9) translateX(-8%);
+}
+
+.feature-card:nth-child(3) .card-illustration img {
+    transform: scale(0.9) translateX(-5%);
+}
+
+.feature-card:nth-child(4) .card-illustration img {
+    transform: scale(0.95) translateX(-5%);
+}
+
+.feature-card:hover .card-illustration img {
+    transform: scale(1) translateX(-5%);
+}
+
+.feature-card.dark .card-illustration {
+    opacity: 0.9;
 }
 
 /* Decorative Elements */
@@ -152,9 +251,41 @@
 }
 
 /* Responsive Design */
+@media (max-width: 1200px) {
+    .features-grid {
+        gap: 1.5rem;
+    }
+
+    .feature-card {
+        padding: 2rem;
+    }
+
+    .card-content {
+        max-width: 65%;
+    }
+}
+
 @media (max-width: 1024px) {
     .features-grid {
         grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .feature-card,
+    .feature-card:nth-child(1),
+    .feature-card:nth-child(2),
+    .feature-card:nth-child(3),
+    .feature-card:nth-child(4) {
+        grid-column: 1 / -1;
+        min-height: 320px;
+    }
+
+    .card-content,
+    .feature-card:nth-child(1) .card-content,
+    .feature-card:nth-child(2) .card-content,
+    .feature-card:nth-child(3) .card-content,
+    .feature-card:nth-child(4) .card-content {
+        max-width: 60%;
     }
 
     .features-header h2,
@@ -174,6 +305,16 @@
     }
 
     .feature-card {
-        min-height: 250px;
+        padding: 1.5rem;
+    }
+
+    .card-content {
+        max-width: 100%;
+    }
+
+    .card-illustration {
+        opacity: 0.15;
+        width: 80%;
+        right: -15%;
     }
 } 
