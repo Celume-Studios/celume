@@ -3,19 +3,25 @@
 .features {
     min-height: 100vh;
     width: 100%;
-    padding: 6rem 2rem;
+    padding: 8rem 2rem;
     background-color: #000000;
     color: white;
     position: relative;
-    overflow: hidden;
-    border-top: 1px solid rgba(255, 87, 51, 0.1);
+    isolation: isolate;
     font-family: 'Poppins', sans-serif;
+    overflow-x: visible;
+}
+
+/* Remove all glow effects */
+.features::before, .features::after {
+    display: none;
 }
 
 .features-content {
     max-width: 1200px;
     margin: 0 auto;
     position: relative;
+    z-index: 1;
 }
 
 /* Header Styles */
@@ -26,15 +32,18 @@
 }
 
 .features-header h2 {
-    font-size: 3rem;
-    line-height: 1.2;
-    color: #FF5733;
-    margin-bottom: 1.5rem;
+    font-size: clamp(2rem, 5vw, 4.5rem);
+    background: linear-gradient(91deg, #FFA380 1.74%, #FFF 43.71%, #FFF 61.62%, #FFA380 102.48%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
 }
 
 .features-header .subtitle {
-    font-size: 1rem;
+    font-size: clamp(1.1rem, 1.5vw, 1.3rem);
     color: rgba(255, 255, 255, 0.8);
     line-height: 1.6;
 }
@@ -47,15 +56,21 @@
 }
 
 .features-subheader h3 {
-    font-size: 2rem;
-    color: #FF5733;
+    font-size: clamp(2rem, 3vw, 2.5rem);
+    background: linear-gradient(91deg, #FFA380 1.74%, #FFF 43.71%, #FFF 61.62%, #FFA380 102.48%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     margin-bottom: 1rem;
     font-weight: 500;
+    line-height: 1.2;
 }
 
 .features-subheader p {
-    font-size: 1rem;
+    font-size: clamp(1.1rem, 1.5vw, 1.3rem);
     color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+    max-width: 800px;
 }
 
 /* Grid Layout */
@@ -148,14 +163,14 @@
 }
 
 .feature-card h4 {
-    font-size: 1.5rem;
+    font-size: clamp(1.5rem, 2vw, 1.8rem);
     margin-bottom: 1rem;
     font-weight: 500;
 }
 
 .feature-card p {
-    font-size: 1rem;
-    color: rgba(255, 255, 255, 0.8);
+    font-size: clamp(1rem, 1.3vw, 1.2rem);
+    color: rgba(255, 255, 255, 0.9);
     margin-bottom: 2rem;
     line-height: 1.6;
 }
@@ -253,34 +268,35 @@
     clip-path: ellipse(70% 100% at 50% 0%);
 }
 
-/* Orange glow effect in the background - right side */
+/* Glow effects */
 .features::after {
     content: '';
     position: absolute;
-    width: 500px;
-    height: 500px;
-    background: rgba(241, 67, 0, 0.15);
-    filter: blur(180px);
-    top: 50%;
-    right: -200px;
-    transform: translateY(-50%);
+    width: 560px;
+    height: 560px;
+    background: rgba(255, 87, 34, 0.325);
+    filter: blur(120px);
+    bottom: 20%;
+    right: -250px;
+    transform: translateY(50%);
     z-index: 0;
     pointer-events: none;
+    mix-blend-mode: screen;
 }
 
-/* Orange glow effect in the background - left side */
 .features::before {
     content: '';
     position: absolute;
-    width: 500px;
-    height: 500px;
-    background: rgba(241, 67, 0, 0.15);
-    filter: blur(180px);
-    top: 50%;
-    left: -200px;
+    width: 560px;
+    height: 560px;
+    background: rgba(255, 87, 34, 0.26);
+    filter: blur(120px);
+    top: 20%;
+    left: -250px;
     transform: translateY(-50%);
     z-index: 0;
     pointer-events: none;
+    mix-blend-mode: screen;
 }
 
 /* Desktop/PC Styles */
@@ -415,18 +431,13 @@
     }
 
     .feature-card h4 {
-        font-size: 1.5rem;
-        margin-bottom: 0.75rem;
-        font-weight: 500;
-        color: white;
-        line-height: 1.2;
+        font-size: 1.8rem;
+        line-height: 1.3;
     }
 
     .feature-card p {
         font-size: 1rem;
-        margin: 0;
-        line-height: 1.4;
-        color: rgba(255, 255, 255, 0.9);
+        line-height: 1.5;
     }
 
     .card-icon {
@@ -434,7 +445,7 @@
         height: 20px;
         margin-bottom: 0.5rem;
         display: none;
-    } */
+    }
 
     .card-illustration {
         position: absolute;
@@ -502,13 +513,13 @@
     }
 
     .feature-card h4 {
-        font-size: 1rem;
-        margin-bottom: 0.6rem;
+        font-size: 1.5rem;
+        line-height: 1.4;
     }
 
     .feature-card p {
-        font-size: 0.75rem;
-        line-height: 1.3;
+        font-size: 1rem;
+        line-height: 1.5;
     }
 
     .card-illustration {
@@ -526,7 +537,17 @@
     }
 
     .feature-card p {
-        font-size: 0.75rem;
-        line-height: 1.3;
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .features-header h2 {
+        font-size: clamp(1.5rem, 3.5vw, 1.8rem);
+        line-height: 1.4;
+    }
+    
+    .features-header .subtitle {
+        font-size: 1rem;
+        line-height: 1.5;
     }
 } 

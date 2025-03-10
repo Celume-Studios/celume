@@ -12,7 +12,7 @@ const Footer = () => {
             <span>Celume studios</span>
           </div>
           <p className="footer-description">
-            Companies that can help you in developing<br />
+            We are a team that can help you in developing<br />
             your company for the future
           </p>
         </div>

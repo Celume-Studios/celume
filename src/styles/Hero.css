@@ -349,7 +349,7 @@
 }
 
 /* Explore Now Button Styles */
-.hero-content .explore-now-btn {
+.hero-content .explore-btn {
     background: #151515;
     border: 1px solid rgba(255, 160, 122, 0.3);
     color: #FFA07A;
@@ -366,25 +366,29 @@
     margin-top: 1rem;
 }
 
-.hero-content .explore-now-btn::before {
+.hero-content .explore-btn::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
+    border-radius: 25px;
+    padding: 1px;
     background: linear-gradient(
-        45deg,
-        transparent,
-        rgba(255, 160, 122, 0.1),
-        transparent
+        90deg,
+        transparent 0%,
+        rgba(255, 160, 122, 0.2) 25%,
+        #FFA07A 50%,
+        rgba(255, 160, 122, 0.2) 75%,
+        transparent 100%
     );
-    transform: translateX(-100%);
-    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-    z-index: -1;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
 }
 
-.hero-content .explore-now-btn:hover {
+.hero-content .explore-btn:hover {
     background: #FFA07A;
     color: #151515;
     border-color: transparent;
@@ -395,11 +399,22 @@
         0 0 0 1px rgba(255, 160, 122, 0.1);
 }
 
-.hero-content .explore-now-btn:hover::before {
-    transform: translateX(100%);
+.hero-content .explore-btn:hover::before {
+    opacity: 1;
+    animation: borderTravel 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    background-size: 200% 100%;
 }
 
-.hero-content .explore-now-btn:active {
+@keyframes borderTravel {
+    0% {
+        background-position: 200% 0%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.hero-content .explore-btn:active {
     transform: translateY(0);
 }
 
@@ -526,7 +541,7 @@
 /* Add hardware acceleration for smooth animations */
 .nav-container,
 .hero-content h1,
-.hero-content .explore-now-btn,
+.hero-content .explore-btn,
 .nav-links a::after {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;

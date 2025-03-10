@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.contact {
+    min-height: 100vh;
+    width: 100%;
+    padding: 8rem 2rem;
+    background-color: #000000;
+    color: white;
+    position: relative;
+    isolation: isolate;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contact-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.contact-header h2 {
+    font-size: clamp(3rem, 5vw, 4.5rem);
+    background: linear-gradient(91deg, #FFA380 1.74%, #FFF 43.71%, #FFF 61.62%, #FFA380 102.48%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.contact-header .subtitle {
+    font-size: clamp(1.1rem, 1.5vw, 1.3rem);
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+}
+
+.contact-form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3rem;
+    border-radius: 24px;
+    background: rgba(26, 26, 26, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 87, 51, 0.05);
+    box-shadow: 
+        0 8px 32px 0 rgba(0, 0, 0, 0.2),
+        -2px -5px 15px 0px rgba(255, 255, 255, 0.05) inset,
+        2px 5px 15px 0px rgba(0, 0, 0, 0.5) inset;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.form-group {
+    position: relative;
+}
+
+.form-input {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    background: #151515;
+    border: 1px solid rgba(255, 160, 122, 0.1);
+    border-radius: 12px;
+    color: #FFA07A;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    transition: all 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+    box-shadow: 
+        -2px -5px 12px 0px rgba(255, 255, 255, 0.15) inset,
+        2px 5px 12px 0px #000 inset;
+}
+
+.form-input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: rgba(255, 160, 122, 0.3);
+    box-shadow: 
+        -2px -5px 12px 0px rgba(255, 255, 255, 0.15) inset,
+        2px 5px 12px 0px #000 inset,
+        0 0 15px rgba(255, 160, 122, 0.15);
+    color: #FFA07A;
+    text-shadow: 0 0 8px rgba(255, 160, 122, 0.3);
+}
+
+.form-textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.submit-btn {
+    background: transparent;
+    border: 1px solid rgba(255, 160, 122, 0.3);
+    color: #FFA07A;
+    padding: 1rem 2rem;
+    border-radius: 100px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    align-self: center;
+    min-width: 200px;
+}
+
+.submit-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #FFA07A;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: -1;
+}
+
+.submit-btn:hover {
+    color: #151515;
+    border-color: #FFA07A;
+    transform: translateY(-2px);
+    box-shadow: 
+        0 10px 20px rgba(255, 160, 122, 0.2),
+        0 6px 6px rgba(255, 160, 122, 0.1);
+}
+
+.submit-btn:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.submit-btn.submitting {
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+.btn-icon {
+    transition: transform 0.3s ease;
+}
+
+.submit-btn:hover .btn-icon {
+    transform: translateX(4px);
+}
+
+.submit-status {
+    margin-top: 2rem;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.submit-status.success {
+    background: rgba(46, 213, 115, 0.1);
+    color: #2ed573;
+    border: 1px solid rgba(46, 213, 115, 0.2);
+}
+
+.submit-status.error {
+    background: rgba(255, 71, 87, 0.1);
+    color: #ff4757;
+    border: 1px solid rgba(255, 71, 87, 0.2);
+}
+
+/* Add subtle glow effect on form container hover */
+.contact-form-container:hover {
+    box-shadow: 
+        0 8px 32px 0 rgba(0, 0, 0, 0.2),
+        -2px -5px 15px 0px rgba(255, 255, 255, 0.05) inset,
+        2px 5px 15px 0px rgba(0, 0, 0, 0.5) inset,
+        0 0 20px rgba(255, 160, 122, 0.1);
+    border-color: rgba(255, 160, 122, 0.1);
+}
+
+/* Add glow effect when typing */
+.form-input:not(:placeholder-shown) {
+    color: #FFA07A;
+    text-shadow: 0 0 8px rgba(255, 160, 122, 0.2);
+}
+
+/* Enhance focus state with orange glow */
+.form-input:focus {
+    background: #151515;
+    border-color: rgba(255, 160, 122, 0.3);
+    box-shadow: 
+        -2px -5px 12px 0px rgba(255, 255, 255, 0.15) inset,
+        2px 5px 12px 0px #000 inset,
+        0 0 15px rgba(255, 160, 122, 0.15);
+}
+
+@media (max-width: 768px) {
+    .contact {
+        padding: 6rem 1.5rem;
+    }
+
+    .contact-form-container {
+        padding: 2rem;
+    }
+
+    .contact-header h2 {
+        font-size: 2.5rem;
+    }
+
+    .form-input {
+        padding: 0.875rem 1.25rem;
+    }
+
+    .submit-btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact {
+        padding: 4rem 1rem;
+    }
+
+    .contact-form-container {
+        padding: 1.5rem;
+    }
+
+    .contact-header h2 {
+        font-size: 2rem;
+    }
+} 

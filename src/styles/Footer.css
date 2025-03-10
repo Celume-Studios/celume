@@ -6,6 +6,13 @@
     padding: 4rem 2rem 2rem;
     font-family: 'Poppins', sans-serif;
     border-top: 1px solid rgba(255, 87, 51, 0.1);
+    position: relative;
+    margin-bottom: 0;
+}
+
+/* Remove glow effects */
+.footer::before, .footer::after {
+    display: none;
 }
 
 .footer-content {
@@ -36,11 +43,14 @@
 .footer-logo span {
     font-size: 1.5rem;
     font-weight: 500;
-    color: white;
+    background: linear-gradient(91deg, #FFA380 1.74%, #FFF 43.71%, #FFF 61.62%, #FFA380 102.48%) ;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .footer-description {
-    color: #FF5733;
+    color: #ffffff;
     font-size: 1rem;
     line-height: 1.6;
 }
@@ -53,7 +63,7 @@
 }
 
 .footer-section h3 {
-    color: white;
+    color: #FFA07A ;
     font-size: 1.2rem;
     font-weight: 500;
     margin-bottom: 1.5rem;

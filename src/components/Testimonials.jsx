@@ -53,15 +53,21 @@ const Testimonials = () => {
                     ))}
                 </div>
             </div>
-            <div className="work-with-us">
+            <section className="work-with-us">
                 <div className="work-with-us-content">
-                    <h2><span>Let's</span> work with Us</h2>
-                    <p>You can find us an many platforms , we are clear your queries and help you build the vision you choose</p>
-                    <button className="know-more-btn">
-                        Know More <span>→</span>
-                    </button>
+                    <h2>Let's work together</h2>
+                    <p>
+                        Ready to transform your digital presence? Partner with us to bring your vision to life. 
+                        From immersive 3D experiences to cutting-edge web solutions, we combine creativity with 
+                        technical excellence to deliver results that exceed expectations. Join the growing list 
+                        of successful businesses who trust us to elevate their brand and engage their audience 
+                        in innovative ways.
+                    </p>
+                    {/* <button className="know-more-btn">
+                        Start Your Journey <span>→</span>
+                    </button> */}
                 </div>
-            </div>
+            </section>
         </section>
     );
 };

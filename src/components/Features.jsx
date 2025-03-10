@@ -11,7 +11,7 @@ import '../styles/Features.css';
 
 const Features = () => {
   return (
-    <section className="features">
+    <section id="features" className="features">
       <div className="features-content">
         {/* Main Heading */}
         <div className="features-header">

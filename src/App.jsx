@@ -2,18 +2,18 @@ import './App.css'
 import Features from './components/Features'
 import Footer from './components/Footer'
 import Hero from './components/Hero'
-import Navbar from './components/Navbar'
 import Products from './components/Products'
 import Testimonials from './components/Testimonials'
+import Contact from './components/Contact'
 
 function App() {
   return (
     <main>
-      <Navbar/>
       <Hero />
       <Features />
       <Products />
-      <Testimonials/>
+      <Testimonials />
+      <Contact />
       <Footer />
     </main>
   )

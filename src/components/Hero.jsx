@@ -18,8 +18,15 @@ const Hero = () => {
     return () => window.removeEventListener('resize', calculateColumns);
   }, []);
 
+  const scrollToProducts = () => {
+    const element = document.getElementById('products');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <div className="hero-wrapper">
+    <section id="hero" className="hero-wrapper">
       {/* Background columns */}
       <div className="hero-container">
         <div className="columns-wrapper">
@@ -46,10 +53,15 @@ const Hero = () => {
             <span className="highlight">With Celume Studios</span>
           </h1>
           <p>we help you build a new visual appeal for your products , your brand , your platform</p>
-          <button className="get-started-btn">Explore Now</button>
+          <button 
+            className="explore-btn" 
+            onClick={scrollToProducts}
+          >
+            Explore Now
+          </button>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
