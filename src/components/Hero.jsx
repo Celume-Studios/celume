@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import logo from '../assets/logo.png';
+import Navbar from './Navbar';
 import '../styles/Hero.css';
 
 const Hero = () => {
@@ -36,23 +36,7 @@ const Hero = () => {
 
       {/* Content overlay */}
       <div className="content-wrapper">
-        {/* Navigation */}
-        <nav className="nav-container">
-          <div className="logo">
-            <img src={logo} alt="Celume Studios" />
-          </div>
-          <div className="nav-center">
-            <div className="nav-links">
-              <a href="#about">About</a>
-              <a href="#services">Services</a>
-              <a href="#portfolio">Portfolio</a>
-              <a href="#contact">Contact Us</a>
-            </div>
-          </div>
-          <div className="nav-right">
-            <button className="get-started-btn">Get Started</button>
-          </div>
-        </nav>
+        <Navbar />
 
         {/* Hero Content */}
         <div className="hero-content">

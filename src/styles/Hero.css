@@ -631,7 +631,7 @@ html {
 /* iPhone and Similar Devices - Keep existing positioning */
 @media screen and (max-width: 390px) {
     .hero-content {
-        transform: translateY(-0.5rem);
+        transform: translateY(2rem);
     }
 
     .nav-links a {
