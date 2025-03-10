@@ -26,7 +26,7 @@
 }
 
 .features-header h2 {
-    font-size: 3.5rem;
+    font-size: 3rem;
     line-height: 1.2;
     color: #FF5733;
     margin-bottom: 1.5rem;
@@ -34,7 +34,7 @@
 }
 
 .features-header .subtitle {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: rgba(255, 255, 255, 0.8);
     line-height: 1.6;
 }
@@ -47,14 +47,14 @@
 }
 
 .features-subheader h3 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #FF5733;
     margin-bottom: 1rem;
     font-weight: 500;
 }
 
 .features-subheader p {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: rgba(255, 255, 255, 0.8);
 }
 
@@ -81,25 +81,25 @@
 /* First card (3D Experiences) - Large */
 .feature-card:nth-child(1) {
     grid-column: span 7;
-    min-height: 380px;
+    min-height: 300px;
 }
 
 /* Second card (UI/UX Design) - Small */
 .feature-card:nth-child(2) {
     grid-column: span 5;
-    min-height: 380px;
+    min-height: 300px;
 }
 
 /* Third card (Marketing) - Small */
 .feature-card:nth-child(3) {
     grid-column: span 5;
-    min-height: 380px;
+    min-height: 300px;
 }
 
 /* Fourth card (Building websites) - Large */
 .feature-card:nth-child(4) {
     grid-column: span 7;
-    min-height: 380px;
+    min-height: 300px;
 }
 
 .feature-card.orange {
@@ -253,71 +253,250 @@
     clip-path: ellipse(70% 100% at 50% 0%);
 }
 
-/* Responsive Design */
-@media (max-width: 1200px) {
+/* Desktop/PC Styles */
+@media (min-width: 1025px) {
+    .features {
+        padding: 6rem 4rem;
+    }
+
+    .features-content {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
     .features-grid {
-        gap: 1.5rem;
+        gap: 2.5rem;
     }
 
     .feature-card {
-        padding: 2rem;
+        padding: 3rem;
     }
 
-    .card-content {
-        max-width: 65%;
+    /* Adjust card sizes for better space usage */
+    .feature-card:nth-child(1) {
+        grid-column: span 8;
+    }
+
+    .feature-card:nth-child(2) {
+        grid-column: span 4;
+    }
+
+    .feature-card:nth-child(3) {
+        grid-column: span 4;
+    }
+
+    .feature-card:nth-child(4) {
+        grid-column: span 8;
+    }
+
+    .feature-card h4 {
+        font-size: 1.8rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .feature-card p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin-bottom: 2rem;
+    }
+
+    .card-link {
+        font-size: 1.1rem;
     }
 }
 
-@media (max-width: 1024px) {
+/* Tablet Styles */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .features {
+        padding: 4rem 2rem;
+    }
+
+    .features-content {
+        max-width: 95%;
+    }
+
     .features-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
 
-    .feature-card,
-    .feature-card:nth-child(1),
-    .feature-card:nth-child(2),
-    .feature-card:nth-child(3),
-    .feature-card:nth-child(4) {
-        grid-column: 1 / -1;
-        min-height: 320px;
+    .feature-card {
+        /* padding: 2.5rem; */
+        min-height: 300px;
     }
 
-    .card-content,
-    .feature-card:nth-child(1) .card-content,
-    .feature-card:nth-child(2) .card-content,
-    .feature-card:nth-child(3) .card-content,
-    .feature-card:nth-child(4) .card-content {
-        max-width: 60%;
+    .feature-card h4 {
+        font-size: 2rem;
     }
 
-    .features-header h2,
-    .features-subheader h3 {
-        font-size: 2.5rem;
+    .feature-card p {
+        font-size: 1.5rem;
     }
 }
 
+/* Mobile Styles */
 @media (max-width: 768px) {
     .features {
-        padding: 4rem 1rem;
+        padding: 4rem 2rem;
+        position: relative;
     }
 
-    .features-header h2,
-    .features-subheader h3 {
-        font-size: 2rem;
+    .features-content {
+        width: 100%;
+        position: relative;
+        z-index: 1;
+    }
+
+    .features-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+        padding: 0;
     }
 
     .feature-card {
         padding: 1.5rem;
+        border-radius: 8px;
+        min-height: unset;
+        height: 100px;
+        background: transparent;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .feature-card:nth-child(odd) {
+        background: linear-gradient(135deg, #FF5733 0%, #FF8C33 100%);
+    }
+
+    .feature-card:nth-child(even) {
+        background: #1A1A1A;
+        border: 1px solid rgba(255, 87, 51, 0.2);
     }
 
     .card-content {
-        max-width: 100%;
+        max-width: 55%;
+        position: relative;
+        z-index: 2;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-right: 1rem;
+    }
+
+    .feature-card h4 {
+        font-size: 1.5rem;
+        margin-bottom: 0.75rem;
+        font-weight: 500;
+        color: white;
+        line-height: 1.2;
+    }
+
+    .feature-card p {
+        font-size: 1rem;
+        margin: 0;
+        line-height: 1.4;
+        color: rgba(255, 255, 255, 0.9);
+    }
+
+    .card-icon {
+        width: 20px;
+        height: 20px;
+        margin-bottom: 0.5rem;
+        display: none;
+    } */
+
+    .card-illustration {
+        position: absolute;
+        right: -2%;
+        bottom: -15%;
+        width: 42%;
+        height: 130%;
+        opacity: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .feature-card:nth-child(odd) .card-illustration {
+        opacity: 1;
+    }
+
+    .feature-card:nth-child(even) .card-illustration {
+        opacity: 0.8;
+    }
+
+    .card-illustration img {
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
+        transform: none;
+    }
+
+    /* Remove hover effects on mobile */
+    .feature-card:hover {
+        transform: none;
+    }
+
+    .feature-card:hover .card-illustration img {
+        transform: none;
+    }
+
+    /* Hide the Start with us link on mobile */
+    .card-link {
+        display: none;
+    }
+
+    .feature-card:nth-child(odd) h4 {
+        margin-bottom: 2.5rem;
+    }
+
+    .feature-card:nth-child(even) h4 {
+        margin-bottom: 2.5rem;
+    }
+}
+
+/* Small Mobile Styles */
+@media (max-width: 480px) {
+    .features {
+        padding: 1rem 0.75rem;
+    }
+
+    .feature-card {
+        height: 90px;
+        padding: 1rem;
+    }
+
+    .card-content {
+        max-width: 58%;
+    }
+
+    .feature-card h4 {
+        font-size: 1rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .feature-card p {
+        font-size: 0.75rem;
+        line-height: 1.3;
     }
 
     .card-illustration {
-        opacity: 0.15;
-        width: 80%;
-        right: -15%;
+        width: 38%;
+        height: 100%;
+        bottom: -10%;
+    }
+
+    .feature-card:nth-child(odd) h4 {
+        margin-bottom: 0.8rem;
+    }
+
+    .feature-card:nth-child(even) h4 {
+        margin-bottom: 0.6rem;
+    }
+
+    .feature-card p {
+        font-size: 0.75rem;
+        line-height: 1.3;
     }
 } 

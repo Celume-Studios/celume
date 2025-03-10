@@ -45,7 +45,7 @@ const Features = () => {
               </div>
               <h4>3D Experiences</h4>
               <p>We craft custom 3D VR experiences, Realistic animated videos and anamorphic animations for screens</p>
-              <a href="#start" className="card-link">Start with us →</a>
+              {/* <a href="#start" className="card-link">Start with us →</a> */}
             </div>
             <div className="card-illustration">
               <img src={threeDImage} alt="3D Experience" />
@@ -60,7 +60,7 @@ const Features = () => {
               </div>
               <h4>UI/UX Design</h4>
               <p>We analyze everything about your business and your customers to provide the most suiting interfaces</p>
-              <a href="#start" className="card-link">Start with us →</a>
+              {/* <a href="#start" className="card-link">Start with us →</a> */}
             </div>
             <div className="card-illustration">
               <img src={uiDesignImage} alt="UI/UX Design" />
@@ -75,7 +75,7 @@ const Features = () => {
               </div>
               <h4>Marketing</h4>
               <p>We help with marketing and advertising your brand through creative 3D visuals or tailormade branded content</p>
-              <a href="#start" className="card-link">Start with us →</a>
+              {/* <a href="#start" className="card-link">Start with us →</a> */}
             </div>
             <div className="card-illustration">
               <img src={marketingImage} alt="Marketing" />
@@ -90,7 +90,7 @@ const Features = () => {
               </div>
               <h4>Building websites & applications</h4>
               <p>Bring your business ideas to life the way you envision it with our studio</p>
-              <a href="#start" className="card-link">Start with us →</a>
+              {/* <a href="#start" className="card-link">Start with us →</a> */}
             </div>
             <div className="card-illustration">
               <img src={developmentImage} alt="Development" />
