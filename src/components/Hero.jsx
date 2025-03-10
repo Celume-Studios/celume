@@ -62,7 +62,7 @@ const Hero = () => {
             <span className="highlight">With Celume Studios</span>
           </h1>
           <p>we help you build a new visual appeal for your products , your brand , your platform</p>
-          <button className="get-started-btn">Get Started</button>
+          <button className="get-started-btn">Explore Now</button>
         </div>
       </div>
     </div>
