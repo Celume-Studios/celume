@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.testimonials {
+    min-height: 100vh;
+    width: 100%;
+    padding: 6rem 2rem;
+    background-color: #000000;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+.testimonials-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.testimonials-header {
+    margin-bottom: 4rem;
+}
+
+.testimonials-header h2 {
+    font-size: 3.5rem;
+    color: #FF5733;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.testimonials-header p {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 1rem;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.testimonial-card {
+    background: rgba(26, 26, 26, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 2rem;
+    position: relative;
+    border: 1px solid rgba(255, 87, 51, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.testimonial-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 16px;
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.1) 0%,
+        rgba(255, 255, 255, 0.05) 100%
+    );
+    pointer-events: none;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.3);
+}
+
+.testimonial-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.testimonial-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 1rem;
+}
+
+.testimonial-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.testimonial-info h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 0.25rem;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-info p {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.testimonial-content {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+}
+
+.quote-mark {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    color: #FF5733;
+    opacity: 0.5;
+}
+
+/* Quote SVG background - keep it above the blurs */
+.testimonials-quotes {
+    position: absolute;
+    top: 50%;
+    right: -100px;
+    width: 800px;
+    height: 600px;
+    transform: translateY(-50%);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='666' height='529' viewBox='0 0 666 529' fill='none'%3E%3Cpath opacity='0.1' d='M320.527 377.857C320.527 463.852 260.591 529 169.384 529C78.1773 529 0 456.034 0 325.739C0 164.172 122.478 26.0591 281.438 0V96.4187C190.232 114.66 122.478 179.808 122.478 255.379C138.113 244.956 158.961 237.138 192.837 237.138C260.591 237.138 320.527 286.65 320.527 377.857ZM742.685 377.857C742.685 463.852 680.143 529 588.936 529C500.335 529 419.552 456.034 419.552 325.739C419.552 164.172 542.03 26.0591 703.596 0V96.4187C612.389 114.66 544.635 179.808 544.635 252.773C560.271 242.35 583.724 237.138 614.995 237.138C682.749 237.138 742.685 286.65 742.685 377.857Z' fill='white'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.55;
+}
+
+/* Orange blur background effects */
+.testimonials::after {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: rgba(241, 67, 0, 0.40);
+    filter: blur(150px);
+    top: 70%;
+    right: -200px;
+    transform: translateY(-50%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.testimonials::before {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: rgba(241, 67, 0, 0.30);
+    filter: blur(150px);
+    top: 30%;
+    left: -200px;
+    transform: translateY(-50%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .testimonials-quotes {
+        width: 800px;
+        height: 600px;
+        right: -80px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .testimonials-header h2 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonials {
+        padding: 4rem 1.5rem;
+    }
+
+    .testimonials-header {
+        margin-bottom: 3rem;
+    }
+
+    .testimonials-header h2 {
+        font-size: 2.5rem;
+    }
+
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .testimonial-card {
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        background: rgba(26, 26, 26, 0.8);
+        padding: 1.5rem;
+    }
+
+    .testimonial-info h4 {
+        font-size: 1rem;
+    }
+
+    .testimonial-info p {
+        font-size: 0.8rem;
+    }
+
+    .testimonial-content {
+        font-size: 0.9rem;
+    }
+
+    .testimonials-quotes {
+        width: 600px;
+        height: 400px;
+        right: -60px;
+        opacity: 0.1;
+    }
+}
+
+@media (max-width: 480px) {
+    .testimonials {
+        padding: 3rem 1rem;
+    }
+
+    .testimonials-header h2 {
+        font-size: 2rem;
+    }
+
+    .testimonial-card {
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+        background: rgba(26, 26, 26, 0.85);
+        padding: 1.25rem;
+    }
+
+    .testimonial-info h4 {
+        font-size: 1rem;
+    }
+
+    .testimonial-info p {
+        font-size: 0.8rem;
+    }
+
+    .testimonial-content {
+        font-size: 0.9rem;
+    }
+
+    .testimonials-quotes {
+        width: 400px;
+        height: 300px;
+        right: -40px;
+        opacity: 0.08;
+    }
+}
+
+/* Let's work with us section */
+.work-with-us {
+    margin-top: 4rem;
+    padding: 2rem 0;
+    text-align: left;
+    align-self: left;
+    width: 100%;
+    background: rgba(24, 7, 0, 0.055) 60%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(24, 7, 0, 0.15) 40%;
+    border-top: 1px solid rgba(255, 87, 51, 0.1);
+}
+
+.work-with-us-content {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.work-with-us-content h2 {
+    font-size: 3.5rem;
+    font-weight: 500;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+}
+
+.work-with-us-content h2 span {
+    color: #FF5733;
+}
+
+.work-with-us-content p {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 500px;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.know-more-btn {
+    background: #FFFFFF;
+    color: #000000;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 100px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    position: absolute;
+    right: 4rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.know-more-btn:hover {
+    transform: translateY(calc(-50% - 2px));
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+}
+
+.know-more-btn span {
+    font-size: 1rem;
+}
+
+/* Responsive adjustments for work-with-us section */
+@media (max-width: 768px) {
+    .work-with-us-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .know-more-btn {
+        position: static;
+        transform: none;
+        margin-top: 1rem;
+    }
+
+    .know-more-btn:hover {
+        transform: translateY(-2px);
+    }
+}
+
+@media (max-width: 480px) {
+    .work-with-us-content h2 {
+        font-size: 2rem;
+    }
+
+    .work-with-us-content p {
+        font-size: 0.9rem;
+    }
+
+    .know-more-btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.8rem;
+    }
+} 

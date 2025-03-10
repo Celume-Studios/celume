@@ -253,6 +253,36 @@
     clip-path: ellipse(70% 100% at 50% 0%);
 }
 
+/* Orange glow effect in the background - right side */
+.features::after {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: rgba(241, 67, 0, 0.15);
+    filter: blur(180px);
+    top: 50%;
+    right: -200px;
+    transform: translateY(-50%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Orange glow effect in the background - left side */
+.features::before {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: rgba(241, 67, 0, 0.15);
+    filter: blur(180px);
+    top: 50%;
+    left: -200px;
+    transform: translateY(-50%);
+    z-index: 0;
+    pointer-events: none;
+}
+
 /* Desktop/PC Styles */
 @media (min-width: 1025px) {
     .features {
