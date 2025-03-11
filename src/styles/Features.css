@@ -4,12 +4,14 @@
     min-height: 100vh;
     width: 100%;
     padding: 8rem 2rem;
+    padding-top: 10rem;
     background-color: #000000;
     color: white;
     position: relative;
     isolation: isolate;
     font-family: 'Poppins', sans-serif;
-    overflow-x: visible;
+    overflow: visible;
+    z-index: 1;
 }
 
 /* Remove all glow effects */
@@ -18,7 +20,7 @@
 }
 
 .features-content {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     position: relative;
     z-index: 1;
@@ -234,11 +236,11 @@
 }
 
 .feature-card:nth-child(2) .card-illustration img {
-    transform: scale(0.9) translateX(-8%);
+    transform: scale(0.95) translateX(-5%);
 }
 
 .feature-card:nth-child(3) .card-illustration img {
-    transform: scale(0.9) translateX(-5%);
+    transform: scale(0.95) translateX(-5%);
 }
 
 .feature-card:nth-child(4) .card-illustration img {
@@ -302,52 +304,52 @@
 /* Desktop/PC Styles */
 @media (min-width: 1025px) {
     .features {
-        padding: 6rem 4rem;
+        padding-top: 5rem;
     }
 
     .features-content {
-        max-width: 90%;
-        margin: 0 auto;
+        max-width: 100%;
+        margin: auto;
     }
 
     .features-grid {
-        gap: 2.5rem;
+        gap: 2rem;
     }
 
     .feature-card {
-        padding: 3rem;
+        padding: 1rem;
     }
 
     /* Adjust card sizes for better space usage */
     .feature-card:nth-child(1) {
-        grid-column: span 8;
+        grid-column: span 7;
     }
 
     .feature-card:nth-child(2) {
-        grid-column: span 4;
+        grid-column: span 5;
     }
 
     .feature-card:nth-child(3) {
-        grid-column: span 4;
+        grid-column: span 5;
     }
 
     .feature-card:nth-child(4) {
-        grid-column: span 8;
+        grid-column: span 7;
     }
 
     .feature-card h4 {
-        font-size: 1.8rem;
-        margin-bottom: 1.2rem;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
     }
 
     .feature-card p {
-        font-size: 1.1rem;
-        line-height: 1.6;
-        margin-bottom: 2rem;
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 1rem;
     }
 
     .card-link {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 }
 
@@ -450,8 +452,8 @@
     .card-illustration {
         position: absolute;
         right: -2%;
-        bottom: -15%;
-        width: 42%;
+        bottom: 0%;
+        width: 50%;
         height: 130%;
         opacity: 1;
         display: flex;
@@ -500,7 +502,7 @@
 /* Small Mobile Styles */
 @media (max-width: 480px) {
     .features {
-        padding: 1rem 0.75rem;
+        padding: 1rem 1rem;
     }
 
     .feature-card {
@@ -509,7 +511,7 @@
     }
 
     .card-content {
-        max-width: 58%;
+        max-width: 50%;
     }
 
     .feature-card h4 {
@@ -523,17 +525,17 @@
     }
 
     .card-illustration {
-        width: 38%;
+        width: 50%;
         height: 100%;
-        bottom: -10%;
+        bottom: 0%;
     }
 
     .feature-card:nth-child(odd) h4 {
-        margin-bottom: 0.8rem;
+        margin-bottom: 0.3rem;
     }
 
     .feature-card:nth-child(even) h4 {
-        margin-bottom: 0.6rem;
+        margin-bottom: 0.3rem;
     }
 
     .feature-card p {
@@ -542,7 +544,7 @@
     }
 
     .features-header h2 {
-        font-size: clamp(1.5rem, 3.5vw, 1.8rem);
+        font-size: clamp(2rem, 3.5vw, 1.8rem);
         line-height: 1.4;
     }
     
