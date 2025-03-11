@@ -48,9 +48,9 @@ const Hero = () => {
         {/* Hero Content */}
         <div className="hero-content">
           <h1>
-            <span className="highlight">Craft Amazing Visual</span>
+            Craft Amazing Visual 
             Design For Your Customers
-            <span className="highlight">With Celume Studios</span>
+            With Celume Studios
           </h1>
           <p>we help you build a new visual appeal for your products , your brand , your platform</p>
           <button 
