@@ -304,6 +304,7 @@
 /* Desktop/PC Styles */
 @media (min-width: 1025px) {
     .features {
+        padding: 4rem;
         padding-top: 5rem;
     }
 
