@@ -1,24 +1,27 @@
 import React from 'react';
-import Image from 'next/image';
 import '../styles/Testimonials.css';
+import yateeshImg from '../assets/yateesh.png';
+import nandaImg from '../assets/nanda.png';
+import rcssImg from '../assets/RCSS.png';
+import quoteImg from '../assets/quote.png';
 
 const testimonials = [
     {
         name: "Yateesh",
         role: "Founder of SreeNidhi Fuels",
-        image: "/images/testimonials/yateesh.png",
+        image: yateeshImg,
         content: "Our brand looks amazing thanks to Celume Studios designs, website, social media, and business cards."
     },
     {
         name: "Nanda Krishna",
         role: "Founder of AOne Visa",
-        image: "/images/testimonials/nanda.png",
+        image: nandaImg,
         content: "Celume Studios elevated our digital presence with exceptional designs, a seamless website, and impactful social media marketing."
     },
     {
         name: "Ramanjaneya Reddy",
         role: "Managing Director of RCSS",
-        image: "/images/testimonials/RCSS.png",
+        image: rcssImg,
         content: "Celume Studios brought our Bhumi project to life with an incredible 3D virtual tour, stunning renders, and seamless digital solutions."
     }
 ];
@@ -37,13 +40,7 @@ const Testimonials = () => {
                         <div className="testimonial-card" key={index}>
                             <div className="testimonial-header">
                                 <div className="testimonial-avatar">
-                                    <Image 
-                                        src={testimonial.image}
-                                        alt={testimonial.name}
-                                        width={48}
-                                        height={48}
-                                        style={{ objectFit: 'cover' }}
-                                    />
+                                    <img src={testimonial.image} alt={testimonial.name} />
                                 </div>
                                 <div className="testimonial-info">
                                     <h4>{testimonial.name}</h4>
@@ -54,13 +51,7 @@ const Testimonials = () => {
                                 {testimonial.content}
                             </div>
                             <div className="quote-mark">
-                                <Image 
-                                    src="/images/quote.png"
-                                    alt="quote"
-                                    width={32}
-                                    height={32}
-                                    style={{ opacity: 0.5 }}
-                                />
+                                <img src={quoteImg} alt="quote" />
                             </div>
                         </div>
                     ))}
