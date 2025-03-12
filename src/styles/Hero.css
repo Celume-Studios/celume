@@ -64,8 +64,8 @@
     -webkit-perspective: 1000;
     transform-style: preserve-3d;
     -webkit-transform-style: preserve-3d;
-    border-right: 1px solid rgba(255, 160, 122, 0.5);
-    box-shadow: 1px 0 2px rgba(255, 160, 122, 0.15);
+     border-right: 1px solid rgba(255, 160, 122, 0.316); 
+    /* box-shadow: 1px 0 2px rgba(255, 160, 122, 0.15); */
 }
 
 @-webkit-keyframes slideColumns {
