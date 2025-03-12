@@ -211,21 +211,53 @@
 @media screen and (max-width: 390px) {
     .nav-container {
         height: 50px;
-        padding: 0 0.8rem;
+        padding: 0 0.5rem;
+        width: 98%;
     }
 
     .nav-center {
-        padding: 0.3rem 0.8rem;
-        max-width: calc(100% - 70px);
+        padding: 0.3rem 0.5rem;
+        max-width: calc(100% - 60px);
     }
 
     .nav-links {
-        gap: 0.5rem;
+        gap: 0.3rem;
     }
 
     .nav-links a {
-        font-size: 0.75rem;
-        padding: 0.25rem 0.4rem;
+        font-size: 0.65rem;
+        padding: 0.25rem 0.3rem;
+        letter-spacing: -0.02em;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+}
+
+/* Add extra small screen support */
+@media screen and (max-width: 350px) {
+    .nav-container {
+        padding: 0 0.4rem;
+        width: 99%;
+    }
+
+    .nav-center {
+        padding: 0.3rem 0.4rem;
+        max-width: calc(100% - 55px);
+    }
+
+    .nav-links {
+        gap: 0.25rem;
+    }
+
+    .nav-links a {
+        font-size: 0.6rem;
+        padding: 0.2rem 0.25rem;
+    }
+
+    .logo img {
+        height: 35px;
     }
 }
 
