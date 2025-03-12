@@ -15,18 +15,7 @@ const Features = () => {
       <div className="features-content">
         {/* Main Heading */}
         <div className="features-header">
-          <h2>
-            We help in transforming businesses
-            <br />
-            with exciting ideas tailor-made for
-            <br />
-            their customers and clients.
-          </h2>
-          <p className="subtitle">
-            Our work involves UI/UX Design, 3D immersive experiences
-            <br />
-            and building platforms that describe you the best
-          </p>
+          <h2>Our Services</h2>
         </div>
 
         {/* Secondary Heading */}
