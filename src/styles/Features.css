@@ -10,7 +10,7 @@
     position: relative;
     isolation: isolate;
     font-family: 'Poppins', sans-serif;
-    overflow: visible;
+    overflow-x: hidden;
     z-index: 1;
 }
 
@@ -386,14 +386,17 @@
 /* Mobile Styles */
 @media (max-width: 768px) {
     .features {
-        padding: 4rem 2rem;
+        padding: 4rem 1rem;
         position: relative;
+        overflow-x: hidden;
+        width: 100%;
     }
 
     .features-content {
         width: 100%;
         position: relative;
         z-index: 1;
+        overflow-x: hidden;
     }
 
     .features-grid {
@@ -401,6 +404,8 @@
         flex-direction: column;
         gap: 2.5rem;
         padding: 0;
+        width: 100%;
+        overflow-x: hidden;
     }
 
     .feature-card {
@@ -452,9 +457,9 @@
 
     .card-illustration {
         position: absolute;
-        right: -2%;
+        right: 0;
         bottom: 0%;
-        width: 50%;
+        width: 45%;
         height: 130%;
         opacity: 1;
         display: flex;
@@ -503,7 +508,12 @@
 /* Small Mobile Styles */
 @media (max-width: 480px) {
     .features {
-        padding: 1rem 1rem;
+        padding: 1rem;
+        overflow-x: hidden;
+    }
+
+    .features-content {
+        overflow-x: hidden;
     }
 
     .feature-card {
@@ -526,9 +536,7 @@
     }
 
     .card-illustration {
-        width: 50%;
-        height: 100%;
-        bottom: 0%;
+        width: 45%;
     }
 
     .feature-card:nth-child(odd) h4 {
