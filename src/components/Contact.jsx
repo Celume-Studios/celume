@@ -36,7 +36,7 @@ const Contact = () => {
             }).toString();
 
             const response = await fetch(
-                `https://script.google.com/macros/s/AKfycbz6mbNhsaNqiyOV4oiwup5Y1saaygr3a3Xchl3IQWRMI-EeYvirs0_bFDYqq9hEUzjU/exec?${params}`, 
+                `https://script.google.com/macros/s/AKfycbxonVm_PMtddShHEnzFDHvQgRkZMJ9zZhuA4OnzFzky-OmYn3FMTH5BgmO0TzB9lzyf/exec?${params}`, 
                 {
                     method: 'GET',
                     mode: 'no-cors',
