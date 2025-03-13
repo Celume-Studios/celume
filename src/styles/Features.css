@@ -29,12 +29,12 @@
 /* Header Styles */
 .features-header {
     text-align: left;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
     position: relative;
 }
 
 .features-header h2 {
-    font-size: clamp(2rem, 5vw, 4.5rem);
+    font-size: 4.5rem;
     background: linear-gradient(91deg, #FFA380 1.74%, #FFF 43.71%, #FFF 61.62%, #FFA380 102.48%);
     background-clip: text;
     -webkit-background-clip: text;
@@ -45,7 +45,7 @@
 }
 
 .features-header .subtitle {
-    font-size: clamp(1.1rem, 1.5vw, 1.3rem);
+    font-size: 1.3rem;
     color: rgba(255, 255, 255, 0.8);
     line-height: 1.6;
 }
@@ -53,12 +53,12 @@
 /* Subheader Styles */
 .features-subheader {
     text-align: left;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
     position: relative;
 }
 
 .features-subheader h3 {
-    font-size: clamp(2rem, 3vw, 2.5rem);
+    font-size: 2.5rem;
     background: linear-gradient(91deg, #FFA380 1.74%, #FFF 43.71%, #FFF 61.62%, #FFA380 102.48%);
     background-clip: text;
     -webkit-background-clip: text;
@@ -69,7 +69,7 @@
 }
 
 .features-subheader p {
-    font-size: clamp(1.1rem, 1.5vw, 1.3rem);
+    font-size: 1.3rem;
     color: rgba(255, 255, 255, 0.8);
     line-height: 1.6;
     max-width: 800px;
@@ -165,13 +165,13 @@
 }
 
 .feature-card h4 {
-    font-size: clamp(1.5rem, 2vw, 1.8rem);
+    font-size: 1.8rem;
     margin-bottom: 1rem;
     font-weight: 500;
 }
 
 .feature-card p {
-    font-size: clamp(1rem, 1.3vw, 1.2rem);
+    font-size: 1.2rem;
     color: rgba(255, 255, 255, 0.9);
     margin-bottom: 2rem;
     line-height: 1.6;
@@ -305,7 +305,7 @@
 @media (min-width: 1025px) {
     .features {
         padding: 4rem;
-        padding-top: 5rem;
+        padding-top: 2rem;
     }
 
     .features-content {
@@ -357,7 +357,7 @@
 /* Tablet Styles */
 @media (max-width: 1024px) and (min-width: 769px) {
     .features {
-        padding: 4rem 2rem;
+        padding: 2rem 2rem;
     }
 
     .features-content {
@@ -378,15 +378,45 @@
         font-size: 2rem;
     }
 
-    .feature-card p {
+    .features-header h2{
+        font-size:3rem;
+    }
+
+    .features-subheader h3{
         font-size: 1.5rem;
+    }
+    .features-subheader p{
+        font-size: 1rem;
+    }
+
+    .feature-card p {
+        font-size: 1.75rem;
+    }
+
+    .feature-card:nth-child(1) {
+        grid-column: span 6;
+    }
+
+    .feature-card:nth-child(2) {
+        grid-column: span 6;
+    }
+
+    .feature-card:nth-child(3) {
+        grid-column: span 6;
+    }
+
+    .feature-card:nth-child(4) {
+        grid-column: span 6;
     }
 }
 
 /* Mobile Styles */
 @media (max-width: 768px) {
     .features {
-        padding: 4rem 1rem;
+        /* padding: 2rem 1rem; */
+        padding-top: 2rem;
+        padding-bottom: 0rem;
+        padding-left: 1rem;
         position: relative;
         overflow-x: hidden;
         width: 100%;
@@ -428,7 +458,7 @@
     }
 
     .card-content {
-        max-width: 55%;
+        max-width: 50%;
         position: relative;
         z-index: 2;
         height: 100%;
@@ -438,13 +468,24 @@
         padding-right: 1rem;
     }
 
+    .features-header h2{
+        font-size:3rem;
+    }
+
+    .features-subheader h3{
+        font-size: 1.5rem;
+    }
+    .features-subheader p{
+        font-size: 1rem;
+    }
+
     .feature-card h4 {
-        font-size: 1.8rem;
+        font-size: 2rem;
         line-height: 1.3;
     }
 
     .feature-card p {
-        font-size: 1rem;
+        font-size: 1.5rem;
         line-height: 1.5;
     }
 
@@ -460,7 +501,7 @@
         right: 0;
         bottom: 0%;
         width: 45%;
-        height: 130%;
+        height: 90%;
         opacity: 1;
         display: flex;
         align-items: center;
@@ -507,58 +548,52 @@
 
 /* Small Mobile Styles */
 @media (max-width: 480px) {
-    .features {
-        padding: 1rem;
-        overflow-x: hidden;
+    .features{
+        padding: 2rem;
     }
-
-    .features-content {
-        overflow-x: hidden;
+    .features-header h2{
+        font-size: 3rem;
+        margin-bottom: 1rem;
     }
-
-    .feature-card {
-        height: 90px;
-        padding: 1rem;
-    }
-
-    .card-content {
-        max-width: 50%;
-    }
-
-    .feature-card h4 {
+    .features-subheader h3{
         font-size: 1.5rem;
-        line-height: 1.4;
+        margin-bottom: 1rem;
     }
-
-    .feature-card p {
+    .features-subheader p{
         font-size: 1rem;
-        line-height: 1.5;
+        margin-bottom: 1rem;
+    }
+    .features-grid .feature-card {
+        height: 190px;
+        min-height: 60px !important;
+        max-height: 190px;
+        padding: 0.5rem !important;
+        border-radius: 6px !important;
     }
 
-    .card-illustration {
-        width: 45%;
+    .features-grid .feature-card .card-content {
+        max-width: 65% !important;
+        padding-right: 0.5rem !important;
     }
 
-    .feature-card:nth-child(odd) h4 {
-        margin-bottom: 0.3rem;
+    .features-grid .feature-card h4 {
+        font-size: 1.5rem !important;
+        line-height: 1.1 !important;
+        margin-bottom: 1rem !important;
     }
 
-    .feature-card:nth-child(even) h4 {
-        margin-bottom: 0.3rem;
+    .features-grid .feature-card p {
+        font-size: 0.85rem !important;
+        line-height: 1.1 !important;
+        margin: 1 !important;
+        opacity: 0.8 !important;
     }
 
-    .feature-card p {
-        font-size: 1rem;
-        line-height: 1.5;
+    .features-grid .feature-card .card-illustration {
+        width: 45% !important;
+        height: 80% !important;
+        margin-bottom: 0rem;
+        margin-right: 1rem;
+        right: -35px !important;
     }
-
-    .features-header h2 {
-        font-size: clamp(2rem, 3.5vw, 1.8rem);
-        line-height: 1.4;
-    }
-    
-    .features-header .subtitle {
-        font-size: 1rem;
-        line-height: 1.5;
-    }
-} 
+}
