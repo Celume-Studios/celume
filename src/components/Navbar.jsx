@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from '../assets/logo.png';
 import '../styles/Navbar.css';
 
 const Navbar = () => {
@@ -13,7 +12,7 @@ const Navbar = () => {
   return (
     <nav className="nav-container">
       <div className="logo">
-        <img src={logo} alt="Celume Studios" onClick={() => scrollToSection('hero')} style={{ cursor: 'pointer' }} />
+        <img src="/images/logo.png" alt="Celume Studios" onClick={() => scrollToSection('hero')} style={{ cursor: 'pointer' }} />
       </div>
       <div className="nav-center">
         <div className="nav-links">

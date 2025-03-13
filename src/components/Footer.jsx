@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from '../assets/logo.png';
 import '../styles/Footer.css';
 
 const Footer = () => {
@@ -8,7 +7,7 @@ const Footer = () => {
       <div className="footer-content">
         <div className="footer-left">
           <div className="footer-logo">
-            <img src={logo} alt="Celume Studios" />
+            <img src="/images/logo.png" alt="Celume Studios" />
             <span>Celume studios</span>
           </div>
           <p className="footer-description">

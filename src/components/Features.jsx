@@ -1,12 +1,4 @@
 import React from 'react';
-import threeDImage from '../assets/3d modeling-amico 1.png';
-import developmentImage from '../assets/Application programming interface-rafiki 1.png';
-import marketingImage from '../assets/Mobile Marketing-amico (1) 1.png';
-import uiDesignImage from '../assets/Mobile UI-UX-cuate 1.png';
-import experiencesIcon from '../assets/experiences.png';
-import marketingIcon from '../assets/marketing.png';
-import uiIcon from '../assets/ui.png';
-import webIcon from '../assets/web.png';
 import '../styles/Features.css';
 
 const Features = () => {
@@ -30,14 +22,14 @@ const Features = () => {
           <div className="feature-card orange">
             <div className="card-content">
               <div className="card-icon">
-                <img src={experiencesIcon} alt="3D Experiences Icon" />
+                <img src="/images/experiences.png" alt="3D Experiences Icon" />
               </div>
               <h4>3D Experiences</h4>
               <p>We craft custom 3D VR experiences, Realistic animated videos and anamorphic animations for screens</p>
               {/* <a href="#start" className="card-link">Start with us →</a> */}
             </div>
             <div className="card-illustration">
-              <img src={threeDImage} alt="3D Experience" />
+              <img src="/images/3d modeling-amico 1.png" alt="3D Experience" />
             </div>
           </div>
 
@@ -45,14 +37,14 @@ const Features = () => {
           <div className="feature-card dark">
             <div className="card-content">
               <div className="card-icon">
-                <img src={uiIcon} alt="UI/UX Design Icon" />
+                <img src="/images/ui.png" alt="UI/UX Design Icon" />
               </div>
               <h4>UI/UX Design</h4>
               <p>We analyze everything about your business and your customers to provide the most suiting interfaces</p>
               {/* <a href="#start" className="card-link">Start with us →</a> */}
             </div>
             <div className="card-illustration">
-              <img src={uiDesignImage} alt="UI/UX Design" />
+              <img src="/images/Mobile UI-UX-cuate 1.png" alt="UI/UX Design" />
             </div>
           </div>
 
@@ -60,14 +52,14 @@ const Features = () => {
           <div className="feature-card dark">
             <div className="card-content">
               <div className="card-icon">
-                <img src={marketingIcon} alt="Marketing Icon" />
+                <img src="/images/marketing.png" alt="Marketing Icon" />
               </div>
               <h4>Marketing</h4>
               <p>We help with marketing and advertising your brand through creative 3D visuals or tailormade branded content</p>
               {/* <a href="#start" className="card-link">Start with us →</a> */}
             </div>
             <div className="card-illustration">
-              <img src={marketingImage} alt="Marketing" />
+              <img src="/images/Mobile Marketing-amico (1) 1.png" alt="Marketing" />
             </div>
           </div>
 
@@ -75,14 +67,14 @@ const Features = () => {
           <div className="feature-card orange">
             <div className="card-content">
               <div className="card-icon">
-                <img src={webIcon} alt="Web Development Icon" />
+                <img src="/images/web.png" alt="Web Development Icon" />
               </div>
               <h4>Building websites & applications</h4>
               <p>Bring your business ideas to life the way you envision it with our studio</p>
               {/* <a href="#start" className="card-link">Start with us →</a> */}
             </div>
             <div className="card-illustration">
-              <img src={developmentImage} alt="Development" />
+              <img src="/images/Application programming interface-rafiki 1.png" alt="Development" />
             </div>
           </div>
         </div>

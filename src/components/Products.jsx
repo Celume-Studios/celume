@@ -1,7 +1,5 @@
 import React from 'react';
 import '../styles/Products.css';
-import celume360Img from '../assets/celume360.png';
-import datamachineImg from '../assets/celumedatammachine.png';
 
 const Products = () => {
   return (
@@ -30,7 +28,7 @@ const Products = () => {
                 </div> */}
               </div>
               <div className="card-image">
-                <img src={celume360Img} alt="Celume 360 Interface" />
+                <img src="/images/celume360.png" alt="Celume 360 Interface" />
               </div>
             </div>
           </div>
@@ -47,7 +45,7 @@ const Products = () => {
                 </div> */}
               </div>
               <div className="card-image">
-                <img src={datamachineImg} alt="Datamachine Interface" />
+                <img src="/images/celumedatammachine.png" alt="Datamachine Interface" />
               </div>
             </div>
           </div>
