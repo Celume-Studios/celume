@@ -1,9 +1,9 @@
 import React from 'react';
 import '../styles/Testimonials.css';
-import yateeshImg from '../assets/yateesh.png';
-import nandaImg from '../assets/nanda.png';
-import rcssImg from '../assets/RCSS.png';
-import quoteImg from '../assets/quote.png';
+import yateeshImg from '@assets/yateesh.png';
+import nandaImg from '@assets/nanda.png';
+import rcssImg from '@assets/RCSS.png';
+import quoteImg from '@assets/quote.png';
 
 const testimonials = [
     {
