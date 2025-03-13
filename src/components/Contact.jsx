@@ -10,6 +10,7 @@ const Contact = () => {
     });
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitStatus, setSubmitStatus] = useState(null);
+    const [errorMessage, setErrorMessage] = useState('');
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -22,33 +23,40 @@ const Contact = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setIsSubmitting(true);
+        setErrorMessage('');
         
         try {
-            const response = await fetch('YOUR_GOOGLE_APPS_SCRIPT_DEPLOYMENT_URL', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    ...formData,
-                    timestamp: new Date().toISOString()
-                })
-            });
+            // Convert form data to URL parameters
+            const params = new URLSearchParams({
+                name: formData.name,
+                email: formData.email,
+                subject: formData.subject,
+                message: formData.message,
+                timestamp: new Date().toISOString()
+            }).toString();
 
-            if (response.ok) {
-                setSubmitStatus('success');
-                setFormData({
-                    name: '',
-                    email: '',
-                    subject: '',
-                    message: ''
-                });
-            } else {
-                setSubmitStatus('error');
-            }
+            const response = await fetch(
+                `https://script.google.com/macros/s/AKfycbz6mbNhsaNqiyOV4oiwup5Y1saaygr3a3Xchl3IQWRMI-EeYvirs0_bFDYqq9hEUzjU/exec?${params}`, 
+                {
+                    method: 'GET',
+                    mode: 'no-cors',
+                }
+            );
+
+            // Since we're using no-cors, we won't get a response we can read
+            // We'll assume success if we get here
+            setSubmitStatus('success');
+            setFormData({
+                name: '',
+                email: '',
+                subject: '',
+                message: ''
+            });
+            
         } catch (error) {
             console.error('Error submitting form:', error);
             setSubmitStatus('error');
+            setErrorMessage('Failed to submit form. Please try again.');
         }
         
         setIsSubmitting(false);
@@ -126,8 +134,8 @@ const Contact = () => {
                 {submitStatus && (
                     <div className={`submit-status ${submitStatus}`}>
                         {submitStatus === 'success' 
-                            ? 'Message sent successfully!' 
-                            : 'Something went wrong. Please try again.'}
+                            ? 'Message sent successfully! We will get back to you soon.' 
+                            : errorMessage || 'Something went wrong. Please try again.'}
                     </div>
                 )}
             </div>

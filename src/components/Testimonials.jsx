@@ -53,7 +53,7 @@ const Testimonials = () => {
                     ))}
                 </div>
             </div>
-            <section className="work-with-us">
+            {/*  <section className="work-with-us">
                 <div className="work-with-us-content">
                     <h2>Let's work together</h2>
                     <p>
@@ -66,8 +66,8 @@ const Testimonials = () => {
                     {/* <button className="know-more-btn">
                         Start Your Journey <span>→</span>
                     </button> */}
-                </div>
-            </section>
+                {/* </div> */}
+            {/* // </section>  */}
         </section>
     );
 };
