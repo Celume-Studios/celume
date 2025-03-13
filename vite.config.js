@@ -23,5 +23,13 @@ export default defineConfig({
   preview: {
     port: 3000,
     host: true
+  },
+  build: {
+    assetsInlineLimit: 4096, // This ensures small assets are inlined
+    rollupOptions: {
+      output: {
+        manualChunks: undefined
+      }
+    }
   }
 })
