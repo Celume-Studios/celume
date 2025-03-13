@@ -27,7 +27,7 @@ const Navbar = () => {
           <a href="#products" onClick={(e) => {
             e.preventDefault();
             scrollToSection('products');
-          }}>Portfolio</a>
+          }}>Products</a>
           <a href="#contact" onClick={(e) => {
             e.preventDefault();
             scrollToSection('contact');

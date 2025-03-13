@@ -32,7 +32,10 @@
 
 .testimonials-header h2 {
     font-size: clamp(3rem, 5vw, 4.5rem);
-    color: #FFA07A;
+   background: linear-gradient(91deg, #FFA380 1.74%, #FFF 43.71%, #FFF 61.62%, #FFA380 102.48%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-weight: 500;
     line-height: 1.2;
 }
