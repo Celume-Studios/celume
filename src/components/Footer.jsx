@@ -41,24 +41,24 @@ const Footer = () => {
       <div className="footer-bottom">
         <div className="footer-bottom-content">
           <p>© 2025 Celume Studios. All rights reserved.</p>
-          <div className="footer-links">
-            <a href="/privacy">Privacy Policy</a>
+          {/* <div className="footer-links">
+            <a href="https://www.termsfeed.com/live/0ea9f754-3587-43d4-aacb-d5c42fecb9ce">Privacy Policy</a>
             <a href="/terms">Terms of Service</a>
             <a href="/cookies">Cookie Policy</a>
-          </div>
+          </div> */}
           <div className="social-links">
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/celumestudios/" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-instagram"></i>
             </a>
-            <a href="https://whatsapp.com" target="_blank" rel="noopener noreferrer">
+            {/* <a href="https://whatsapp.com" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-whatsapp"></i>
-            </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+            </a> */}
+            <a href="https://www.linkedin.com/company/celume-studios/" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-linkedin-in"></i>
             </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+            {/* <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-twitter"></i>
-            </a>
+            </a> */}
           </div>
         </div>
       </div>
