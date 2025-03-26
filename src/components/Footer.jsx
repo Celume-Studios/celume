@@ -21,9 +21,9 @@ const Footer = () => {
             <h3>Services</h3>
             <ul>
               <li>Web/App Development</li>
-              <li>UI/UX Designing</li>
-              <li>Marketing</li>
-              <li>3D Visuals</li>
+              <li>Designs</li>
+              <li>Advertisement</li>
+              <li>3D Experiences</li>
             </ul>
           </div>
 

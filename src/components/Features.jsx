@@ -39,8 +39,8 @@ const Features = () => {
               <div className="card-icon">
                 <img src="/images/ui.png" alt="UI/UX Design Icon" />
               </div>
-              <h4>UI/UX Design</h4>
-              <p>We analyze everything about your business and your customers to provide the most suiting interfaces</p>
+              <h4>Designs</h4>
+              <p>We analyze everything about your business and your customers to provide the most suiting visuals</p>
               {/* <a href="#start" className="card-link">Start with us →</a> */}
             </div>
             <div className="card-illustration">
@@ -54,7 +54,7 @@ const Features = () => {
               <div className="card-icon">
                 <img src="/images/marketing.png" alt="Marketing Icon" />
               </div>
-              <h4>Marketing</h4>
+              <h4>Advertisement</h4>
               <p>We help with marketing and advertising your brand through creative 3D visuals or tailormade branded content</p>
               {/* <a href="#start" className="card-link">Start with us →</a> */}
             </div>

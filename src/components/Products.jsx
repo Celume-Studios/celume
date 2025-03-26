@@ -20,7 +20,7 @@ const Products = () => {
           <div className="product-card">
             <div className="product-card-inner">
               <div className="card-content">
-                <div className="tag">Download Now</div>
+                <div className="tag">Developing</div>
                 <h3>Celume 360</h3>
                 <p>Celume 360 is the most easiest to use tool to build custom virtual tour websites in seconds</p>
                 {/* <div className="card-description">

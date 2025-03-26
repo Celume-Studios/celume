@@ -52,7 +52,7 @@ const Hero = () => {
             Design For Your Customers
             With Celume Studios
           </h1>
-          <p>we help you build a new visual appeal for your products , your brand , your platform</p>
+          <p>We help you build a new visual appeal for your products , your brand , your platform</p>
           <button 
             className="explore-btn" 
             onClick={scrollToProducts}
