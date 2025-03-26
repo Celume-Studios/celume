@@ -25,7 +25,7 @@ const Features = () => {
                 <img src="/images/experiences.png" alt="3D Experiences Icon" />
               </div>
               <h4>3D Experiences</h4>
-              <p>We craft custom 3D AR/VR experiences and virtual tours for our clients</p>
+              <p>We specialize in crafting 3D AR/VR experiences and interactive virtual tours that captivates and immerses our clients audiences</p>
               {/* <a href="#start" className="card-link">Start with us →</a> */}
             </div>
             <div className="card-illustration">
@@ -70,7 +70,7 @@ const Features = () => {
                 <img src="/images/web.png" alt="Web Development Icon" />
               </div>
               <h4>Building websites & applications</h4>
-              <p>Bring your business ideas to life the way you envision it with our studio</p>
+              <p>Bring your business ideas to life with our studio, where we build websites and applications tailored to your needs</p>
               {/* <a href="#start" className="card-link">Start with us →</a> */}
             </div>
             <div className="card-illustration">
