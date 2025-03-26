@@ -25,7 +25,7 @@ const Features = () => {
                 <img src="/images/experiences.png" alt="3D Experiences Icon" />
               </div>
               <h4>3D Experiences</h4>
-              <p>We craft custom 3D VR experiences, Realistic animated videos and anamorphic animations for screens</p>
+              <p>We craft custom 3D AR/VR experiences and virtual tours for our clients</p>
               {/* <a href="#start" className="card-link">Start with us →</a> */}
             </div>
             <div className="card-illustration">
@@ -54,7 +54,7 @@ const Features = () => {
               <div className="card-icon">
                 <img src="/images/marketing.png" alt="Marketing Icon" />
               </div>
-              <h4>Advertisement</h4>
+              <h4>Advertisements</h4>
               <p>We help with marketing and advertising your brand through creative 3D visuals or tailormade branded content</p>
               {/* <a href="#start" className="card-link">Start with us →</a> */}
             </div>
