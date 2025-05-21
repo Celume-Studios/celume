@@ -20,7 +20,7 @@ const Products = () => {
           <div className="product-card">
             <div className="product-card-inner">
               <div className="card-content">
-                <div className="tag">Developing</div>
+                <div className="tag">Under Development</div>
                 <h3>Celume 360</h3>
                 <p>Celume 360 is the most easiest to use tool to build custom virtual tour websites in seconds</p>
                 {/* <div className="card-description">
@@ -33,19 +33,19 @@ const Products = () => {
             </div>
           </div>
 
-          {/* Datamachine Card */}
+          {/* Call Nova Card */}
           <div className="product-card">
             <div className="product-card-inner">
               <div className="card-content">
-                <div className="tag">Upcoming</div>
-                <h3>Celume Datamachine</h3>
-                <p>Data machine skips all the hard work that goes into data collection and makes it a simple one click procedure</p>
+                <div className="tag">Beta</div>
+                <h3>Celume Call Nova</h3>
+                <p>Call Nova is an human like ai voice assistant that can be used to receive calls and note down the important details</p>
                 {/* <div className="card-description">
                   Upcoming - Extracting and mining data made easy
                 </div> */}
               </div>
               <div className="card-image">
-                <img src="/images/celumedatammachine.png" alt="Datamachine Interface" />
+                <img src="/images/callnova.jpg" alt="Celume Call Nova Interface" />
               </div>
             </div>
           </div>
