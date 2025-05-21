@@ -28,7 +28,7 @@ const Products = () => {
                 </div> */}
               </div>
               <div className="card-image">
-                <img src="/images/celume360.png" alt="Celume 360 Interface" />
+                <img src="/images/celume360(1).png" alt="Celume 360 Interface" />
               </div>
             </div>
           </div>
