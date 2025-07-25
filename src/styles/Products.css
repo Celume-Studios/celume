@@ -214,12 +214,31 @@
 /* Responsive Design */
 @media screen and (min-width: 1025px) {
     .products{
-        padding: 0rem 4rem;
+        padding: 0rem 1rem;
         padding-bottom: 2rem;
     }
     .card-image {
         width: 35%;
         min-width: 180px;
+    }
+    .product-card-button {
+        background: none;
+        border: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        display: block;
+        box-shadow: none;
+        outline: none;
+        /* Remove default button styles */
+        color: inherit;
+        font: inherit;
+    }
+    .product-card-button:focus {
+        outline: none;
+        box-shadow: none;
     }
 }
 
