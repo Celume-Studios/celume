@@ -235,6 +235,7 @@
         /* Remove default button styles */
         color: inherit;
         font: inherit;
+        text-align: left;
     }
     .product-card-button:focus {
         outline: none;
