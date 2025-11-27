@@ -41,11 +41,10 @@ const Footer = () => {
       <div className="footer-bottom">
         <div className="footer-bottom-content">
           <p>© 2025 Celume Studios. All rights reserved.</p>
-          {/* <div className="footer-links">
-            <a href="https://www.termsfeed.com/live/0ea9f754-3587-43d4-aacb-d5c42fecb9ce">Privacy Policy</a>
-            <a href="/terms">Terms of Service</a>
-            <a href="/cookies">Cookie Policy</a>
-          </div> */}
+          <div className="footer-links">
+            <a href="/privacy-policy.html" className="footer-link">Privacy Policy</a>
+            <a href="/terms-of-service.html" className="footer-link">Terms of Service</a>
+          </div>
           <div className="social-links">
             <a href="https://www.instagram.com/celumestudios/" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-instagram"></i>
